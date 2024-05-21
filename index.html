@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Analysis Dashboard</title>
-<link rel="shortcut icon" type="image/x-icon" href="logo_tab/BG Removed Ais New Logo - Coloured Datar.png" />
+<link rel="shortcut icon" type="image/x-icon" href="logo_tab\BG Removed Ais New Logo - Coloured Datar.png" />
 <style>
     body, html {
         height: 100%;
@@ -48,13 +48,13 @@
         padding-top: 53.125%;
         height: 0;
     }
-    .video-container video {
-        width: 100%; /* Adjust the width */
-        height: 100%; /* Adjust the height */
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+        .video-container video {
+            width: 100%; /* Adjust the width */
+            height: 100%; /* Adjust the height */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     .iframe-container {
         flex-grow: 1;
         padding: 10px;
@@ -73,7 +73,7 @@
 <body>
 
 <!-- Top banner image -->
-<!-- <img class="banner" src="top_banner/BG Removed Ais_New_Logo-_White Datar.png" alt="Top Banner"> -->
+<!-- <img class="banner" src="../top_banner/BG Removed Ais_New_Logo-_White Datar.png" alt="Top Banner"> -->
 
 <div class="navigation">
     <!-- Custom navigation buttons -->
@@ -85,7 +85,7 @@
     <button id="btn-video5" class="nav-btn" onclick="changeContent('1760462308', 'video/Nabila Putri.mp4')">Video 5</button>
     <button id="btn-video6" class="nav-btn" onclick="changeContent('2005039173', 'video/@shasaurus_video_7339542002683464965.mp4')">Video 6</button>
     <button id="btn-video7" class="nav-btn" onclick="changeContent('112374481', 'video/@_shaz_video_7340265314422164741.mp4')">Video 7</button>
-    <button id="btn-video8" class="nav-btn" onclick="changeContent('273801639', 'video/@vaniawinolaa_video_7339817658860211461.mp4')">Video 8</button>
+    <button id="btn-video7" class="nav-btn" onclick="changeContent('273801639', 'video/@vaniawinolaa_video_7339817658860211461.mp4')">Video 8</button>
 </div>
 
 <div class="dashboard">
@@ -108,51 +108,59 @@
     </div>
 </div>
 
+
+
+
 <script>
+
     function changeContent(sheetGid, videoFileName) {
-        var sheetIframe = document.getElementById('sheet-iframe');
-        var videoPlayer = document.getElementById('video-player');
+    var sheetIframe = document.getElementById('sheet-iframe');
+    var videoPlayer = document.getElementById('video-player');
 
-        // Update the src for the Google Sheet iframe
-        sheetIframe.src = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRffDjIjy0kOqIO-BVaRcYe3aarS56Rygq7XkT8lU03XULXxXCAIef3jqMvvA2Rjq0qg9tkYRkBD4ST/pubhtml?gid=' + sheetGid + '&single=true';
+    // Update the src for the Google Sheet iframe
+    sheetIframe.src = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRffDjIjy0kOqIO-BVaRcYe3aarS56Rygq7XkT8lU03XULXxXCAIef3jqMvvA2Rjq0qg9tkYRkBD4ST/pubhtml?gid=' + sheetGid + '&single=true';
 
-        // Update the source for the local video and play it
-        videoPlayer.src = videoFileName;
-        videoPlayer.load(); // Load the new video source
-        videoPlayer.play(); // Play the video
+    // Update the source for the local video and play it
+    videoPlayer.src = videoFileName;
+    videoPlayer.load(); // Load the new video source
+    videoPlayer.play(); // Play the video
 
-        // Reset active class for buttons
-        document.getElementById('btn-overall').classList.remove('active');
-        document.getElementById('btn-video1').classList.remove('active');
-        document.getElementById('btn-video2').classList.remove('active');
-        document.getElementById('btn-video3').classList.remove('active');
-        document.getElementById('btn-video4').classList.remove('active');
-        document.getElementById('btn-video5').classList.remove('active');
-        document.getElementById('btn-video6').classList.remove('active');
-        document.getElementById('btn-video7').classList.remove('active');
-        document.getElementById('btn-video8').classList.remove('active');
+    // Reset active class for buttons
+    document.getElementById('btn-overall').classList.remove('active');
+    document.getElementById('btn-video1').classList.remove('active');
+    document.getElementById('btn-video2').classList.remove('active');
+    document.getElementById('btn-video3').classList.remove('active');
+    document.getElementById('btn-video4').classList.remove('active');
+    document.getElementById('btn-video5').classList.remove('active');
+    document.getElementById('btn-video6').classList.remove('active');
+    document.getElementById('btn-video7').classList.remove('active');
+    document.getElementById('btn-video8').classList.remove('active');
+    document.getElementById('btn-video9').classList.remove('active');
+    document.getElementById('btn-video10').classList.remove('active');
 
-        // Add 'active' class to the clicked button
-        if (sheetGid === '181573463') {
-            document.getElementById('btn-overall').classList.add('active');
-        } else if (sheetGid === '1694409518') {
-            document.getElementById('btn-video1').classList.add('active');
-        } else if (sheetGid === '2006574845') {
-            document.getElementById('btn-video2').classList.add('active');
-        } else if (sheetGid === '1920324017') {
-            document.getElementById('btn-video3').classList.add('active');
-        } else if (sheetGid === '1411064133') {
-            document.getElementById('btn-video4').classList.add('active');
-        } else if (sheetGid === '1760462308') {
-            document.getElementById('btn-video5').classList.add('active');
-        } else if (sheetGid === '2005039173') {
-            document.getElementById('btn-video6').classList.add('active');
-        } else if (sheetGid === '112374481') {
-            document.getElementById('btn-video7').classList.add('active');
-        } else if (sheetGid === '273801639') {
-            document.getElementById('btn-video8').classList.add('active');
-        }
+
+
+
+
+    // Add 'active' class to the clicked button
+    if (sheetGid === '181573463') {
+        document.getElementById('btn-overall').classList.add('active');
+    } else if (sheetGid === '1694409518') {
+        document.getElementById('btn-video1').classList.add('active');
+    } else if (sheetGid === '2006574845') {
+        document.getElementById('btn-video2').classList.add('active');
+    } else if (sheetGid === '1920324017') {
+        document.getElementById('btn-video3').classList.add('active');
+    } else if (sheetGid === '1411064133') {
+        document.getElementById('btn-video4').classList.add('active');
+    } else if (sheetGid === '1760462308') {
+        document.getElementById('btn-video5').classList.add('active');
+    } else if (sheetGid === '2005039173') {
+        document.getElementById('btn-video6').classList.add('active');
+    } else if (sheetGid === '112374481') {
+        document.getElementById('btn-video7').classList.add('active');
     }
+}
 </script>
 
 </body>
