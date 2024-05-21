@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Analysis Dashboard</title>
-<link rel="shortcut icon" type="image/x-icon" href="..\logo_tab\BG Removed Ais New Logo - Coloured Datar.png" />
+<link rel="shortcut icon" type="image/x-icon" href="logo_tab\BG Removed Ais New Logo - Coloured Datar.png" />
 <style>
     body, html {
         height: 100%;
@@ -77,22 +77,22 @@
 
 <div class="navigation">
     <!-- Custom navigation buttons -->
-    <button id="btn-overall" class="nav-btn" onclick="changeContent('181573463', '../video_ais/ais_logo.mp4')">Overall</button>
-    <button id="btn-video1" class="nav-btn" onclick="changeContent('1694409518', '../video/Electra.mp4')">Video 1</button>
-    <button id="btn-video2" class="nav-btn" onclick="changeContent('2006574845', '../video/gio.mp4')">Video 2</button>
-    <button id="btn-video3" class="nav-btn" onclick="changeContent('1920324017', '../video/@lilykenzie_video_7339824181753695493.mp4')">Video 3</button>
-    <button id="btn-video4" class="nav-btn" onclick="changeContent('1411064133', '../video/Nada Tarina.mp4')">Video 4</button>
-    <button id="btn-video5" class="nav-btn" onclick="changeContent('1760462308', '../video/Nabila Putri.mp4')">Video 5</button>
-    <button id="btn-video6" class="nav-btn" onclick="changeContent('2005039173', '../video/@shasaurus_video_7339542002683464965.mp4')">Video 6</button>
-    <button id="btn-video7" class="nav-btn" onclick="changeContent('112374481', '../video/@_shaz_video_7340265314422164741.mp4')">Video 7</button>
-    <button id="btn-video7" class="nav-btn" onclick="changeContent('273801639', '../video/@vaniawinolaa_video_7339817658860211461.mp4')">Video 8</button>
+    <button id="btn-overall" class="nav-btn" onclick="changeContent('181573463', 'video_ais/ais_logo.mp4')">Overall</button>
+    <button id="btn-video1" class="nav-btn" onclick="changeContent('1694409518', 'video/Electra.mp4')">Video 1</button>
+    <button id="btn-video2" class="nav-btn" onclick="changeContent('2006574845', 'video/gio.mp4')">Video 2</button>
+    <button id="btn-video3" class="nav-btn" onclick="changeContent('1920324017', 'video/@lilykenzie_video_7339824181753695493.mp4')">Video 3</button>
+    <button id="btn-video4" class="nav-btn" onclick="changeContent('1411064133', 'video/Nada Tarina.mp4')">Video 4</button>
+    <button id="btn-video5" class="nav-btn" onclick="changeContent('1760462308', 'video/Nabila Putri.mp4')">Video 5</button>
+    <button id="btn-video6" class="nav-btn" onclick="changeContent('2005039173', 'video/@shasaurus_video_7339542002683464965.mp4')">Video 6</button>
+    <button id="btn-video7" class="nav-btn" onclick="changeContent('112374481', 'video/@_shaz_video_7340265314422164741.mp4')">Video 7</button>
+    <button id="btn-video7" class="nav-btn" onclick="changeContent('273801639', 'video/@vaniawinolaa_video_7339817658860211461.mp4')">Video 8</button>
 </div>
 
 <div class="dashboard">
     <div class="video-container">
         <!-- Placeholder for local video -->
         <video id="video-player" controls autoplay muted loop>
-            <source src="../video_ais/ais_logo.mp4" type="video/mp4">
+            <source src="video_ais/ais_logo.mp4" type="video/mp4">
         </video>
     </div>
     <div class="iframe-container">
@@ -121,7 +121,7 @@
     sheetIframe.src = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRffDjIjy0kOqIO-BVaRcYe3aarS56Rygq7XkT8lU03XULXxXCAIef3jqMvvA2Rjq0qg9tkYRkBD4ST/pubhtml?gid=' + sheetGid + '&single=true';
 
     // Update the source for the local video and play it
-    videoPlayer.src = 'file:///D:/Kerja/Aisensum/Code/advi/video/' + videoFileName;
+    videoPlayer.src = 'file:///video/' + videoFileName;
     videoPlayer.load(); // Load the new video source
     videoPlayer.play(); // Play the video
 
